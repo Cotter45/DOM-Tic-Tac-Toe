@@ -54,3 +54,83 @@ footer > button {
 #board > div:hover {
     background-color: blue;
 }
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    h1 {
+        padding: 25px;
+    }
+
+    main {
+        height: 40vh;
+        width: 40vh;
+    }
+
+    footer {
+        padding: 5vh;
+        display: flex;
+        align-items: center;
+        gap: 5vh;
+    }
+
+    footer > button {
+        padding: 15px;
+        border-radius: 5px;
+    }
+
+    #board {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 5px;
+        background-color: black;
+        height: 100%;
+        width: 100%;
+    }
+
+    #board > div {
+        background-color: aqua;
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #board > div:hover {
+        background-color: blue;
+    }
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+
+}
