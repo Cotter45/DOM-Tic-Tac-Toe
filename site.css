@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    padding: 25px;
+}
+
+main {
+    height: 60vh;
+    width: 80vh;
+}
+
+footer {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15vh;
+}
+
+footer > button {
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 5px;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+}
+
+#board > div {
+    background-color: aqua;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#board > div:hover {
+    background-color: blue;
+}
