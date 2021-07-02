@@ -17,12 +17,19 @@ const game = () => {
     const board = document.getElementById("board");
     board.addEventListener("click", event => {
         let move = event.target.id;
+        localStorage.setItem("lastMove", move);
         logic.makeMove(move);
         updatePlayer();
         if(logic.checkWin(logic.grid)) {
             logic.endGame(logic.checkWin(logic.grid));
             reset();
-          }
+        }
+        logic.computerTurn();
+        updatePlayer();
+        if(logic.checkWin(logic.grid)) {
+            logic.endGame(logic.checkWin(logic.grid));
+            reset();
+        }
     });
 }
 
