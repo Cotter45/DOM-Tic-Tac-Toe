@@ -73,7 +73,7 @@ export class TTT {
         }
         if (this.grid[0][j] === 'X' &&
             this.grid[2][j] === 'X' &&
-            this.grid[1][j] === 'O' ||
+            this.grid[1][j] === ' ' ||
             this.grid[0][j] === 'O' &&
             this.grid[2][j] === 'O' &&
             this.grid[1][j] === ' ') {
