@@ -23,6 +23,7 @@ const game = () => {
         if(logic.checkWin(logic.grid)) {
             logic.endGame(logic.checkWin(logic.grid));
             reset();
+            return;
         }
         logic.computerTurn();
         updatePlayer();

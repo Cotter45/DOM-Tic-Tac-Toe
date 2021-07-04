@@ -156,6 +156,7 @@ export class TTT {
 
     let random = moves[Math.floor(Math.random() * moves.length)];
     let move = moves.splice(moves.indexOf(random), 1);
+    console.log('oof')
     return move[0];
   }
 
