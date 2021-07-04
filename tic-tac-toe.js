@@ -44,6 +44,74 @@ export class TTT {
             moves.push(`${i}-${j}`)
         }
         if (i === 0 &&
+            j === 0 &&
+          this.grid[i][j] === 'X' &&
+          this.grid[i + 2][j + 2] === 'X' ||
+          i === 0 &&
+          j === 0 &&
+          this.grid[i][j] === 'O' &&
+          this.grid[i + 2][j + 2] === 'O') {
+            if (this.grid[i + 1][j + 1] === " ") {
+              return `${i + 1}-${j + 1}`
+            }
+        }
+        if (this.grid[0][2] === 'X' &&
+            this.grid[2][0] === 'X' &&
+            this.grid[1][1] === ' ' ||
+            this.grid[0][2] === 'O' &&
+            this.grid[2][0] === 'O' &&
+            this.grid[1][1] === ' ') {
+              return "1-1";
+        }
+        if (this.grid[i][2] === 'X' &&
+            this.grid[i][0] === 'X' &&
+            this.grid[i][1] === ' ' ||
+            this.grid[i][2] === 'O' &&
+            this.grid[i][0] === 'O' &&
+            this.grid[i][1] === ' ') {
+              return `${i}-1`;
+        }
+        if (this.grid[0][j] === 'X' &&
+            this.grid[2][j] === 'X' &&
+            this.grid[1][j] === 'O' ||
+            this.grid[0][j] === 'O' &&
+            this.grid[2][j] === 'O' &&
+            this.grid[1][j] === ' ') {
+              return `1-${j}`;
+        }
+        if (this.grid[1][1] === 'X' &&
+            this.grid[0][0] === 'X' &&
+            this.grid[2][2] === ' ' ||
+            this.grid[1][1] === 'O' &&
+            this.grid[0][0] === 'O' &&
+            this.grid[2][2] === ' ') {
+              return "2-2";
+        }
+        if (this.grid[1][1] === 'X' &&
+            this.grid[2][2] === 'X' &&
+            this.grid[0][0] === ' ' ||
+            this.grid[1][1] === 'O' &&
+            this.grid[2][2] === 'O' &&
+            this.grid[0][0] === ' ') {
+              return "0-0";
+        }
+        if (this.grid[1][1] === 'X' &&
+            this.grid[0][2] === 'X' &&
+            this.grid[2][0] === ' ' ||
+            this.grid[1][1] === 'O' &&
+            this.grid[0][2] === 'O' &&
+            this.grid[2][0] === ' ') {
+              return "2-0";
+        }
+        if (this.grid[1][1] === 'X' &&
+            this.grid[2][0] === 'X' &&
+            this.grid[0][2] === ' ' ||
+            this.grid[1][1] === 'O' &&
+            this.grid[2][0] === 'O' &&
+            this.grid[0][2] === ' ') {
+              return "0-2";
+        }
+        if (i === 0 &&
             this.grid[i][j] === 'X' &&
             this.grid[i + 1][j] === 'X' ||
             i === 0 &&
